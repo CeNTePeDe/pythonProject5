@@ -5,5 +5,7 @@ class  Animal:
         self.ears = ears
 
     def voice(self, roar:str):
-        print(roar.upper)
-        
+        print(roar.upper())
+
+    def show(self):
+        print('this is your dog')
