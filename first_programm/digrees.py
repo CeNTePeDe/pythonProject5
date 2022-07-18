@@ -9,5 +9,6 @@ if __name__ == '__main__':
     k = 0
     for _ in range(10):
         k = k+1
+        print(k)
     value = int(input('ввести значение  '))
     print(get(value).upper())
