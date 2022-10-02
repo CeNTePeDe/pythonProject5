@@ -14,4 +14,15 @@ def inorderTraverse(node):
     return
 
 
-inorderTraverse(root)
+def preorderTraverse(node):
+    print(node['data'], end=' ')  # Access this node's data
+    if len(node['children']) > 0:
+        for child in node['children']: #Traverse child nodes
+            preorderTraverse(child)
+    return
+
+
+if __name__ == '__main__':
+    inorderTraverse(root)
+    print('***********', end=' ')
+    preorderTraverse(root)
