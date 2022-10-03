@@ -23,7 +23,7 @@ def preorderTraverse(node):
 
 
 def postorderTraverse(node):
-    for child in nide['children']:
+    for child in node['children']:
         postorderTraverse(child)  # Traverse child nodes
     print(node['data'], end=' ')  # Access this node's data
     # Base case
