@@ -1,5 +1,5 @@
 class ContactList(list):
-
+# наследуется от кдасса list
     def seach(self,name):
         """Return all contacts that contain the search values in their name."""
         matching_contacts = []
