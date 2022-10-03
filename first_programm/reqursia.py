@@ -17,16 +17,18 @@ def inorderTraverse(node):
 def preorderTraverse(node):
     print(node['data'], end=' ')  # Access this node's data
     if len(node['children']) > 0:
-        for child in node['children']: #Traverse child nodes
+        for child in node['children']:  # Traverse child nodes
             preorderTraverse(child)
     return
+
+
 def postorderTraverse(node):
     for child in nide['children']:
-        postorderTraverse(child) #Traverse child nodes
+        postorderTraverse(child)  # Traverse child nodes
     print(node['data'], end=' ')  # Access this node's data
     # Base case
     return
-        
+
 
 if __name__ == '__main__':
     inorderTraverse(root)
