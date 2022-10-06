@@ -1,6 +1,7 @@
 import AuthException as Ex
 import user
 
+
 class Authenticator:
     def __init__(self):
         """Construct an aythenticator to manage users logging in and out"""
@@ -11,7 +12,7 @@ class Authenticator:
             raise Ex.UserNameAlredyExist(username)
         if len(password) < 6:
             raise Ex.PasswordTooShort(username)
-        self.users[username] = user.User(username,password)
+        self.users[username] = user.User(username, password)
 
     def login(self, username, password):
         try:
