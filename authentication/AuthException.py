@@ -15,3 +15,6 @@ class InvalidUsername(AuthException):
 
 class InvalidPassword(AuthException):
     pass
+
+class PermissionError(Exception):
+    pass
