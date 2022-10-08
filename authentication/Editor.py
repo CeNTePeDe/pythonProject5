@@ -33,3 +33,19 @@ class Editor:
                 print("Sorry, incorrect password")
             else:
                 self.username = username
+
+    def is_permitted(self, permission):
+        try:
+            auth.Authorizor.check_permission(permission, self.username)
+        except AuthException.NotLoggedInError as e:
+            print("{} is not logged in".format(e.username))
+            return False
+        except AuthException.NotPermissionError as e:
+            print("{} cannot {}".format(e.username, permission))
+            return False
+        else:
+            return True
+
+    def
+
+
