@@ -8,7 +8,7 @@ def square_eq_solver(a, b, c):
 
     if discriminant == 0:
         result.append(-b / (2 * a))
-    else:
+    elif discriminant > 0:
         result.append((-b + sqrt(discriminant)) / (2 * a))
         result.append((-b - sqrt(discriminant)) / (2 * a))
     return result
@@ -46,3 +46,8 @@ class SquareEqSolverTestCase(unittest.TestCase):
         res = square_eq_solver(2, 5, -3)
         self.assertEqual(len(res), 2)
         self.assertEqual(res, [0.5, -3])
+
+
+if __name__ == '__main__':
+    main()
+
