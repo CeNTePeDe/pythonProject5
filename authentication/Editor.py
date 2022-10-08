@@ -1,10 +1,10 @@
 import AuthException
-import user
+
 import Authenticator
 import Authorizor as auth
 
 # set up a test user and permission
-Authenticator.Authenticator.add_user("joe", "joepassword")
+Authenticator.Authenticator.add_user('joe', 'hdjdyt')
 auth.Authorizor.add_permission("test program")
 auth.Authorizor.add_permission("change program")
 auth.Authorizor.permit_user("test program", "joe")
