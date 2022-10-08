@@ -23,3 +23,11 @@ class InvalidPassword(AuthException):
 
 class PermissionError(Exception):
     pass
+
+
+class NotLoggedName(AuthException):
+    pass
+
+
+class NotPermissionError(AuthException):
+    pass
