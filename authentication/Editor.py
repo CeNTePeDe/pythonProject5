@@ -14,10 +14,10 @@ class Editor:
     def __init__(self):
         self.username = None
         self.menu_map = {
-            "login" : self.login,
-            "test" : self.test,
-            "change" : self.change,
-            "quit" : self.quit,
+            "login": self.login,
+            "test": self.test,
+            "change": self.change,
+            "quit": self.quit,
         }
 
     def login(self):
@@ -52,12 +52,31 @@ class Editor:
 
     def change(self):
         if self.is_permitted("change program"):
-            print("Chenging program now...")
+            print("Changing program now...")
 
     def quit(self):
         raise SystemExit()
 
+    def menu(self):
+        try:
+            answer = ""
+            while True:
+                print("""
+                Please enter a command:
+                \tlogin\tLigin
+                \ttest\tTest the program
+                \tchange\tChange the program
+                \tquit\tQuit"""
+                      )
+                answer = input("enter a comand: ").lower()
+                try:
+                    func = self.menu_map[answer]
+                except KeyError:
+                    print("{} is not valid option".format(answer))
+                else:
+                    func()
+        finally:
+            print("Thank you for testing module")
 
 
-
-
+Editor().menu()
