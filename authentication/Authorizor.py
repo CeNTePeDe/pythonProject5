@@ -26,3 +26,16 @@ class Authorizor:
             if username not in self.authenticator.users:
                 raise Ex.InvalidUsername(username)
             perm_set.add(username)
+
+    def check_permission(self, perm_name, username):
+        if not self.authenticator.is_logged_in(username):
+            raise Ex.NotLoggedName(username)
+        try:
+            perm_set = self.permission[perm_name]
+        except KeyError:
+            raise Ex.PermissionError("Permission does not exist")
+        else:
+            if username not in perm_set:
+                raise Ex.NotPermissionError(username)
+            else:
+                return True
