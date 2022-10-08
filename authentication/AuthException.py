@@ -25,7 +25,7 @@ class PermissionError(Exception):
     pass
 
 
-class NotLoggedName(AuthException):
+class NotLoggedInError(AuthException):
     pass
 
 
