@@ -2,8 +2,9 @@ import AuthException as Ex
 import Authenticator
 
 aythenticator = Authenticator.Authenticator()
-class Authorizor:
 
+
+class Authorizor:
 
     def __init__(self, aythenticator):
         self.aythenticator = aythenticator
@@ -45,4 +46,4 @@ class Authorizor:
 
 authorizor = Authorizor(aythenticator)
 authorizor.add_permission("paint")
-authorizor.check_permission("paint", 'olga')
+#authorizor.check_permission("paint", 'olga')
