@@ -4,10 +4,15 @@ import Authenticator
 import Authorizor as auth
 
 # set up a test user and permission
-Authenticator.Authenticator.add_user('joe', 'hdjdyt')
-auth.Authorizor.add_permission("test program")
-auth.Authorizor.add_permission("change program")
-auth.Authorizor.permit_user("test program", "joe")
+#Authenticator.Authenticator.add_user('joe', 'hdjdyth')
+#auth.Authorizor.add_permission("test program")
+#auth.Authorizor.add_permission("change program")
+#auth.Authorizor.permit_user("test program", "joe")
+name1 = Authenticator.Authenticator()
+print(name1.add_user('Olga', 'password123'))
+
+
+
 
 
 class Editor:
