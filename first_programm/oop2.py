@@ -44,3 +44,4 @@ if __name__ == '__main__':
     print([1, 2, 3])
     my_list = MyList([1,2,3])
     print(my_list)
+    print(dir(my_list))
