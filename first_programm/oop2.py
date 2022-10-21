@@ -40,8 +40,14 @@ class MyList(list):
         return super(MyList, self).__str__().replace(',', '\n')
 
 
+#if __name__ == '__main__':
+#    print([1, 2, 3])
+#    my_list = MyList([1,2,3])
+#    print(my_list)
+#    print(dir(my_list))
+
+class Empty(object):
+    pass
+
 if __name__ == '__main__':
-    print([1, 2, 3])
-    my_list = MyList([1,2,3])
-    print(my_list)
-    print(dir(my_list))
+    print(dir(Empty()))
