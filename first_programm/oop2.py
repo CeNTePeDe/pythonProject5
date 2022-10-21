@@ -35,3 +35,11 @@ class CEO:
 
     def __str__(self):
         return f'CEO {self.name}, salary = {self.salary}, bonus={self.bonus}%, total bonus = {self.calculate_total_bonus()} rub'
+
+if __name__ == '__main__':
+    masha = Cleaner('Maria Ivanovna')
+    print(masha)
+    grisha = Manager('Grigoriy Petrovich')
+    print(grisha)
+    ivan_palych = CEO('Ivan Pavlovich')
+    print(ivan_palych)
