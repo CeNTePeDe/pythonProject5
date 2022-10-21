@@ -26,10 +26,21 @@ class CEO(Employee):
     def __init__(self, name):
         super(CEO, self).__init__(name, salary=105000, bonus=100)
 
+#if __name__ == '__main__':
+#    masha = Cleaner('Maria Ivanovna')
+#    print(masha)
+#    grisha = Manager('Grigoriy Petrovich')
+#    print(grisha)
+#    ivan_palych = CEO('Ivan Pavlovich')
+#    print(ivan_palych)
+
+
+class MyList(list):
+    def __str__(self):
+        return super(MyList, self).__str__().replace(',', '\n')
+
+
 if __name__ == '__main__':
-    masha = Cleaner('Maria Ivanovna')
-    print(masha)
-    grisha = Manager('Grigoriy Petrovich')
-    print(grisha)
-    ivan_palych = CEO('Ivan Pavlovich')
-    print(ivan_palych)
+    print([1, 2, 3])
+    my_list = MyList([1,2,3])
+    print(my_list)
