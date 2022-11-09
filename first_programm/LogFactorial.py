@@ -1,4 +1,5 @@
 import logging
+logging.disable() # отключкение протоколирования
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.debug('Начало программы')
