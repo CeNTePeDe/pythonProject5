@@ -1,5 +1,5 @@
 import unittest
-from testing_prog.count_square import square_eq_solver
+from first_programm.count_square import square_eq_solver
 
 
 class SquareEqSolverTestCase(unittest.TestCase):
@@ -21,12 +21,6 @@ class SquareEqSolverTestCase(unittest.TestCase):
         with self.assertRaises(AttributeError) as e:
             res = square_eq_solver(0.1, 0.5, -3)
             self.assertEqual("вводимые данные должны быть целочисленные", e.exception.args[0])
-
-
-
-    #def no_sight(self):
-    #    with self.assertRaises(ValueError) as e:
-#
 
 
 

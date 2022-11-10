@@ -10,3 +10,6 @@ class FactorialTestCase(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             res = factorial(0.4)
             self.assertEqual("вводимые данные должны быть целочисленные", e.exception.args[0])
+
+if __name__ == '__main__':
+    unittest.main()
