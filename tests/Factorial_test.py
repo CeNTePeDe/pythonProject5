@@ -14,11 +14,15 @@ class FactorialTestCase(unittest.TestCase):
         res = factorial(4)
         self.assertEqual(24, 24)
 
-    def test_error(self):
-        with self.assertRaises(TypeError) as e:
+    def test_error_type(self):
+        with self.assertRaises(ValueError) as e:
             res = factorial(0.4)
             self.assertEqual("вводимые данные должны быть целочисленные", e.exception.args[0])
 
+    def test_error_value(self):
+        with self.assertRaises(ValueError) as e:
+            res = factorial(-5)
+            self.assertEqual("вводимые данные должны быть неотрицательные", e.exception.args[0])
 
 if __name__ == '__main__':
     unittest.main()
