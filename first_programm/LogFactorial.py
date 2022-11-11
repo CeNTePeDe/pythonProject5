@@ -1,4 +1,5 @@
 import logging
+import doctest
 logging.disable() # отключкение протоколирования
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -10,6 +11,10 @@ def factorial(n: int):
     функция высчитывает факториалы от числа n
     :param n: int
     :return: total: int
+    >>> factorial(5)
+    120
+    >>> factorial(3)
+    6
     """
     logging.debug('Начало factorial(%s%%)' % (n))
     total = 1
@@ -21,5 +26,7 @@ def factorial(n: int):
 
 
 if __name__ == '__main__':
-    print(factorial(5))
+    #print(factorial(5))
+    #doctest.testmod()
+    print(factorial(0))
     logging.debug('end')
